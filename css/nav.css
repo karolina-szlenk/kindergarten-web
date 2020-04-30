@@ -1,0 +1,47 @@
+.nav-bar {
+    align-items: center;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    position: fixed;
+    width: 100%;
+}
+
+.nav-bar__logo {
+    cursor: pointer;
+    height: auto;
+    width: 7%;
+}
+
+.nav-bar__links {
+    list-style-type: none;
+}
+
+/* popular media query */
+@media only screen and (max-width: 479px) {
+}
+
+@media only screen and (min-width: 480px) and (max-width: 599px) {
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+}
+
+@media only screen and (min-width: 768px) and (max-width: 799px) {
+}
+
+@media only screen and (min-width: 800px) and (max-width: 959px) {
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1023px) {
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1365px) { 
+}
+
+@media only screen and (min-width: 1366px) { 
+}

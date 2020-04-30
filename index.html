@@ -4,13 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Przedszkole "Zielona Łąka" w Lęborku</title>
-    <meta name="keywords" content="przedszkole, Lębork, zielona, łąka, artystyczne, dzieci" />
-    <link rel="stylesheet" href="normalize.css" />
+    <meta
+      name="keywords"
+      content="przedszkole, Lębork, zielona, łąka, artystyczne, dzieci"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Sue+Ellen+Francisco&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/nav.css" />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
     <header class="nav-bar">
-      <img class="nav-bar-logo" />
-      <nav></nav>
+      <img class="nav-bar__logo" src="./img/default-logo.svg" alt="logo" />
+      <nav>
+        <input type="checkbox" class="nav-bar-btn" />
+        <label class="nav-bar-icon"><i class="fas fa-bars"></i></label>
+        <ul class="nav-bar__links">
+          <li><a href="#" class="nav-bar__single-link">Strona główna</a></li>
+          <li><a href="#" class="nav-bar__single-link">Aktualności</a></li>
+          <li><a href="#" class="nav-bar__single-link">Rekrutacja</a></li>
+          <li><a href="#" class="nav-bar__single-link">O nas</a></li>
+          <li><a href="#" class="nav-bar__single-link">Galeria</a></li>
+          <li><a href="#" class="nav-bar__single-link">Kontakt</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
       <section class="hero"></section>
