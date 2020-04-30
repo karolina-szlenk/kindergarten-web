@@ -1,47 +1,112 @@
 .nav-bar {
-    align-items: center;
-    background-color: var(--primary-color);
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    position: fixed;
-    width: 100%;
+  background-color: var(--primary-color);
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4em;
+  justify-content: space-between;
+  margin: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 .nav-bar__logo {
-    cursor: pointer;
-    height: auto;
-    width: 7%;
+  cursor: pointer;
+  height: 40px;
+  margin: 0;
+  padding: 0.2rem;
+}
+
+nav {
+  /* display: none; */
 }
 
 .nav-bar__links {
-    list-style-type: none;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar__links__item {
+  /* display: none; */
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+.nav-bar__single-link {
+  color: var(--secondary-color);
+}
+
+.nav-bar__mobile {
+  position: absolute;
+  right: 0.5em;
+  top: 0.5em;
+  width: 1.2em;
+}
+
+.nav-bar__icon {
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: flex;
 }
 
 /* popular media query */
 @media only screen and (max-width: 479px) {
 }
 
-@media only screen and (min-width: 480px) and (max-width: 599px) {
+@media only screen and (min-width: 480px) {
 }
 
-@media only screen and (min-width: 600px) and (max-width: 767px) {
+@media only screen and (min-width: 600px) {
 }
 
-@media only screen and (min-width: 768px) and (max-width: 799px) {
+@media only screen and (min-width: 768px) {
+  .nav-bar {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  nav {
+    display: block;
+  }
+
+  .nav-bar__links {
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-bar__links__item {
+    padding: 0.8rem 1.2rem;
+  }
+
+  .nav-bar__mobile {
+    display: none;
+  }
 }
 
-@media only screen and (min-width: 800px) and (max-width: 959px) {
+@media only screen and (min-width: 800px) {
 }
 
-@media only screen and (min-width: 960px) and (max-width: 1023px) {
+@media only screen and (min-width: 960px) {
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+@media only screen and (min-width: 1024px) {
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1365px) { 
+@media only screen and (min-width: 1200px) {
 }
 
-@media only screen and (min-width: 1366px) { 
+@media only screen and (min-width: 1366px) {
 }

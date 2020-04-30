@@ -22,19 +22,22 @@
   </head>
   <body>
     <header class="nav-bar">
-      <img class="nav-bar__logo" src="./img/default-logo.svg" alt="logo" />
+      <a href="#">
+        <img class="nav-bar__logo" src="./img/default-logo.svg" alt="logo" /></a>
       <nav>
-        <input type="checkbox" class="nav-bar-btn" />
-        <label class="nav-bar-icon"><i class="fas fa-bars"></i></label>
         <ul class="nav-bar__links">
-          <li><a href="#" class="nav-bar__single-link">Strona główna</a></li>
-          <li><a href="#" class="nav-bar__single-link">Aktualności</a></li>
-          <li><a href="#" class="nav-bar__single-link">Rekrutacja</a></li>
-          <li><a href="#" class="nav-bar__single-link">O nas</a></li>
-          <li><a href="#" class="nav-bar__single-link">Galeria</a></li>
-          <li><a href="#" class="nav-bar__single-link">Kontakt</a></li>
+          <li class="nav-bar__links__item"><a href="#" class="nav-bar__single-link">Strona główna</a></li>
+          <li class="nav-bar__links__item"><a href="#" class="nav-bar__single-link">Aktualności</a></li>
+          <li class="nav-bar__links__item"><a href="#" class="nav-bar__single-link">Rekrutacja</a></li>
+          <li class="nav-bar__links__item"><a href="#" class="nav-bar__single-link">O nas</a></li>
+          <li class="nav-bar__links__item"><a href="#" class="nav-bar__single-link">Galeria</a></li>
+          <li class="nav-bar__links__item"><a href="#" class="nav-bar__single-link">Kontakt</a></li>
         </ul>
       </nav>
+      <div class="nav-bar__mobile">
+        <i class="fas fa-bars nav-bar__icon" id="open"></i>
+        <i class="fas fa-times nav-bar__icon" id="close"></i>
+      </div>
     </header>
     <main>
       <section class="hero"></section>
