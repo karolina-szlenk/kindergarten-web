@@ -4,13 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Przedszkole "Zielona Łąka" w Lęborku</title>
-    <meta name="keywords" content="przedszkole, Lębork, zielona, łąka, artystyczne, dzieci" />
-    <link rel="stylesheet" href="normalize.css" />
+    <meta
+      name="keywords"
+      content="przedszkole, Lębork, zielona, łąka, artystyczne, dzieci"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Sue+Ellen+Francisco&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/nav.css" />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
     <header class="nav-bar">
-      <img class="nav-bar-logo" />
-      <nav></nav>
+      <a href="#">
+        <img class="nav-bar__logo" src="./img/default-logo.svg" alt="logo" />
+      </a>
+      <nav>
+        <ul class="nav-bar__links">
+          <li class="nav-bar__links__item"><a href="#" class="nav-bar__single-link">Strona główna</a></li>
+          <li class="nav-bar__links__item"><a href="#" class="nav-bar__single-link">Aktualności</a></li>
+          <li class="nav-bar__links__item"><a href="#" class="nav-bar__single-link">Rekrutacja <i class="fas fa-caret-down"></i></a>
+            <ul class="nav-bar__sublinks">
+              <li class="nav-bar__links__item"><a href="#" class="nav-bar__single-link">Regulamin</a></li>
+              <li class="nav-bar__links__item"><a href="#" class="nav-bar__single-link">Do pobrania</a></li>
+              <li class="nav-bar__links__item"><a href="#" class="nav-bar__single-link">RODO</a></li>
+            </ul>
+          </li>  
+          <li class="nav-bar__links__item"><a href="#" class="nav-bar__single-link">O nas <i class="fas fa-caret-down"></i></a>
+            <ul class="nav-bar__sublinks">
+              <li class="nav-bar__links__item"><a href="#" class="nav-bar__single-link">Historia przedszkola</a></li>
+              <li class="nav-bar__links__item"><a href="#" class="nav-bar__single-link">Zajęcia</a></li>
+              <li class="nav-bar__links__item"><a href="#" class="nav-bar__single-link">Plan dnia</a></li>
+              <li class="nav-bar__links__item"><a href="#" class="nav-bar__single-link">Jadłospis</a></li>
+            </ul>
+          </li>
+          <li class="nav-bar__links__item"><a href="#" class="nav-bar__single-link">Galeria</a></li>
+          <li class="nav-bar__links__item"><a href="#" class="nav-bar__single-link">Kontakt</a></li>
+        </ul>
+      </nav>
+      <div class="nav-bar__mobile">
+        <i class="fas fa-bars nav-bar__icon" id="open"></i>
+        <i class="fas fa-times nav-bar__icon" id="close"></i>
+      </div>
     </header>
     <main>
       <section class="hero"></section>
@@ -18,5 +59,8 @@
       <section class="about"></section>
     </main>
     <footer></footer>
+
+    <!-- ------ SCRIPTS ------ -->
+    <script src='./scripts/nav.js'></script>
   </body>
 </html>

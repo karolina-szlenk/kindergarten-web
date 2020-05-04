@@ -1,0 +1,24 @@
+:root {
+    --primary-font: 'Sue Ellen Francisco', cursive;
+    --secondary-font: 'Montserrat', sans-serif;
+    --primary-color: #009933;
+    --secondary-color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--secondary-font);
+    font-size: 16px;
+    width: 100%;
+}
+
+li, a {
+    text-decoration: none;
+}
