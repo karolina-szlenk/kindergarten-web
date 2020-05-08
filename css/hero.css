@@ -1,6 +1,6 @@
 .slider {
     position: relative;
-    top: 2.7rem;
+    /* top: 2.7rem; */
 }
 
 .slider__wrapper {
@@ -200,7 +200,7 @@
 @media only screen and (min-width: 768px) {
     .slider {
         position: relative;
-        top: 3.1rem;
+        /* top: 3.1rem; */
     }
 
     .slider .hero__title {
