@@ -7,6 +7,8 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -21,4 +23,25 @@ body {
 
 li, a {
     text-decoration: none;
+}
+
+.top {
+    background: url(../img/meadow-top.svg); 
+}
+
+.middle {
+    background: url(../img/meadow-middle.svg); 
+}
+
+.bottom {
+    background: url(../img/meadow-bottom.svg); 
+}
+
+.meadow {
+    width: 100%;
+    height: 10rem;
+    margin: -1px 0px; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

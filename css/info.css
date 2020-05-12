@@ -1,8 +1,18 @@
 .info {
+    width: 100%;
+    margin: 0;
+    background: url(../img/sky.svg); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.info__container {
     display: grid;
     grid-gap: 2rem; 
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    margin: 2rem auto; 
+    margin: 0 auto; 
+    padding: 4rem 0;
     width: 90vw;   
     transition: background-color 0.2s ease-in-out;  
 }
@@ -16,9 +26,10 @@
 }
 
 .info__element {
-    background-color: lightblue;
+    background-color: #fff;
     border-radius: 1rem;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    color: #304462;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -33,6 +44,7 @@
     margin: 0;
     padding: 1rem;
     text-align: justify;
+    line-height: 2rem;
 }
 
 .info__image {
@@ -54,8 +66,7 @@
     font-size: 1.8rem;  
     margin: 0;
     padding: 2rem 0.5rem 1rem;
-    text-transform: uppercase;
-      
+    text-transform: uppercase;    
 }
 
 @media only screen and (min-width: 400px) and (max-width: 599px) {
@@ -76,7 +87,7 @@
 }
 
 @media only screen and (min-width: 1300px) {
-    .info {
+    .info__container {
         max-width: 60vw;
     }
 }
