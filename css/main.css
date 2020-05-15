@@ -21,6 +21,11 @@ body {
     width: 100%;
 }
 
+.container {
+    width: 90vw; 
+    margin: 0 auto; 
+}
+
 li, a {
     text-decoration: none;
 }
@@ -44,4 +49,10 @@ li, a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+@media only screen and (min-width: 1300px) {
+    .container {
+        max-width: 60vw;
+    }
 }

@@ -11,10 +11,7 @@
     display: grid;
     grid-gap: 2rem; 
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    margin: 0 auto; 
     padding: 4rem 0;
-    width: 90vw;   
-    transition: background-color 0.2s ease-in-out;  
 }
 
 .info__element:hover  .info__image{ 
@@ -87,8 +84,5 @@
 }
 
 @media only screen and (min-width: 1300px) {
-    .info__container {
-        max-width: 60vw;
-    }
+    
 }
-
