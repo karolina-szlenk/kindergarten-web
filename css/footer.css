@@ -1,14 +1,16 @@
 footer {
-    background-color: #59ca77;
+    background-color: #82d799;
     color: #304462;
     text-align: center;
+    position: relative;
+    top: 5rem;
 }
 
 .contact {
     display: grid;
     grid-gap: 2rem; 
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    padding: 4rem 0;
+    padding: 3rem 0 0;
 }
 
 .contact__description {
@@ -63,10 +65,21 @@ footer {
     display: none;
 }
 
+@media only screen and (max-width: 350px) {
+    footer {
+        position: relative;
+        top: 4rem;
+    }
+}
+
 @media only screen and (min-width: 768px) {
 
     .footer {
         flex-direction: row;
+    }
+
+    .contact {
+        padding: 3rem 0;
     }
 
     .footer__info {
