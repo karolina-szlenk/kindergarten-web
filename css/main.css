@@ -1,8 +1,11 @@
 :root {
     --primary-font: 'Caveat Brush', cursive;
     --secondary-font: 'Montserrat', sans-serif;
-    --primary-color: #009933;
+    --primary-color: #30bd56;
     --secondary-color: #fff;
+    --third-color: #7aabf7;
+    --forth-color: #ff2a2a;
+    --fifth-color: #304462;
 }
 
 * {
@@ -45,7 +48,7 @@ li, a {
 .meadow {
     width: 100%;
     height: 10rem;
-    margin: -1px 0px; 
+    margin: -1px 0; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
