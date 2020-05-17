@@ -217,7 +217,7 @@
   .nav-bar__sublinks {
     justify-content: flex-start; 
     position: absolute;
-    top: 5.4rem;
+    top: 5.2rem;
   }
 
   .nav-bar__sublinks .nav-bar__links__item {
