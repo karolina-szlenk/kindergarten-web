@@ -1,5 +1,5 @@
 /* temporary styles */
-.regulation {
+.downloads {
     background-color: #97ddaa;
     color: #304462;
     text-align: center;
@@ -13,23 +13,9 @@
     padding: 0;
     text-transform: uppercase;
   }
-  
-  .regulation__description {
-    font-size: 1.1rem;
-    line-height: 2rem;
-    margin: 0;
-    padding: 3rem 0;
-    text-align: left;
-  }
-  
-  .regulation__position {
-    display: flex;
-    justify-content: flex-start;
-  }
-  
-  .regulation__number {
-    font-weight: bold;
-    min-width: 2rem;
-  }
+
+.downloads__wrapper {
+  padding: 2rem 0 0;
+}
   
  
