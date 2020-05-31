@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="./css/about.css" />
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/contact.css" />
+    <link rel="stylesheet" href="./css/regulations.css" />
+    <link rel="stylesheet" href="./css/downloads.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
@@ -48,7 +50,7 @@
                 <a href="regulations.html" class="nav-bar__single-link">Regulamin</a>
               </li>
               <li class="nav-bar__links__item">
-                <a href="downloads.html" class="nav-bar__single-link">Do pobrania</a>
+                <a href="#" class="nav-bar__single-link">Do pobrania</a>
               </li>
               <li class="nav-bar__links__item">
                 <a href="#" class="nav-bar__single-link">RODO</a>
@@ -80,7 +82,7 @@
             <a href="#" class="nav-bar__single-link">Galeria</a>
           </li>
           <li class="nav-bar__links__item">
-            <a href="#contact" class="nav-bar__single-link">Kontakt</a>
+            <a href="contact.html" class="nav-bar__single-link">Kontakt</a>
           </li>
         </ul>
       </nav>
@@ -91,21 +93,19 @@
     </header>
     <main>
       <section class="meadow top"></section>
-      <section class="map">
-        <h3 class="map__title">Niepubliczne <br class="break" />Przedszkole<br />ZIELONA ŁĄKA</h3>
-        <p class="map__description">
-          ul. Akacjowa 1<br />84-300 Lębork<br />Tel: +48 504 670 846<br />Email: szlenk.tadeusz@gmail.com<br />Pn-Pt: 7:00 - 16:00
-        </p>
-        <iframe class="map__google"
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2314.5639293205204!2d17.7306585!3d54.5411838!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fddd589510c0a5%3A0x3c776e353a6f7ba!2sAkacjowa%201%2C%2084-351%20L%C4%99bork!5e0!3m2!1spl!2spl!4v1589713814441!5m2!1spl!2spl"
-          width="1000"
-          height="600"
-          frameborder="0"
-          style="border: 0;"
-          allowfullscreen=""
-          aria-hidden="false"
-          tabindex="0"
-        ></iframe>
+      <section class="downloads">
+        <div class="container">
+            <h3 class="regulation__title">Do pobrania</h3>
+            <div class="downloads__wrapper">
+                <a download="Regulamin Przedszkola.pdf" id="regulation"><button class="about__btn about__btn--modifier"><i class="fa fa-download"></i> Regulamin Przedszkola</button></a>  
+            </div>
+            <div class="downloads__wrapper">
+              <a download="Karta Informacyjna Dziecka.pdf" id="kids-card"><button class="about__btn about__btn--modifier"><i class="fa fa-download"></i> Karta informacyjna dziecka</button></a>  
+          </div> 
+          <div class="downloads__wrapper">
+            <a download="Regulamin Przedszkola.pdf" id="statute"><button class="about__btn about__btn--modifier"><i class="fa fa-download"></i> Statut Przedszkola</button></a>  
+        </div>          
+        </div>
       </section>
       <section class="meadow middle"></section>
     </main>
