@@ -1,0 +1,9 @@
+.hide {
+    display: none;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+}
