@@ -14,6 +14,10 @@
     padding: 4rem 0 0rem;
 }
 
+.info__container--modifier {
+    padding: 0rem;
+}
+
 .info__element:hover  .info__image{ 
     clip-path: circle(100%);
 }
@@ -45,6 +49,7 @@
 }
 
 .info__image {
+    display: block;
     height: auto;
     margin: 0;  
     max-width: 100%;
@@ -76,6 +81,11 @@
     .info__container {
         padding: 4rem 0;
     } 
+
+    .info__container--modifier {
+        padding: 0rem;
+    }
+    
 
     .info__element {
         justify-content: space-between;
