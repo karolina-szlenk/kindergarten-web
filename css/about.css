@@ -5,7 +5,6 @@
 }
 
 .about__element {
-  align-items: center;
   color: #304462;
   display: flex;
   flex-direction: column;
@@ -19,6 +18,7 @@
   font-size: 2rem;
   margin: 0;
   padding: 0;
+  text-align: center;
   text-transform: uppercase;
 }
 

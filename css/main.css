@@ -54,9 +54,13 @@ a {
   border-radius: 2px;
 }
 
+.link {
+  text-align: center;
+}
+
 .main__description {
   font-size: 1.1rem;
-  line-height: 2rem;
+  line-height: 1.7rem;
   margin: 0;
   padding: 3rem 0;
 }
