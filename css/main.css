@@ -36,6 +36,7 @@ main {
 
 li,
 a {
+  list-style-type: none;
   text-decoration: none;
 }
 
@@ -45,6 +46,14 @@ a {
   text-align: center;
 }
 
+.border {
+  width: 180px;
+  height: 4px;
+  background: var(--fifth-color);
+  margin: 30px auto;
+  border-radius: 2px;
+}
+
 .main__description {
   font-size: 1.1rem;
   line-height: 2rem;
@@ -52,13 +61,23 @@ a {
   padding: 3rem 0;
 }
 
+.main__text {
+  text-align: left;
+  margin: 1.5rem 0;
+}
+
 .main__title {
   font-family: var(--primary-font);
-  font-size: 2rem;
+  font-size: 2.5rem;
   line-height: 2.8rem;
   margin: 0;
   padding: 0;
   text-transform: uppercase;
+}
+
+.main__subtitle {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .sky-top {
