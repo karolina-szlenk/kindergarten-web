@@ -32,23 +32,24 @@
   min-width: 2rem;
 }
 
-.regulation__info {
+.main__ref {
   margin-top: 3rem;
+  text-align: left;
 }
 
-.regulation__info-link {
+.regulation__ref -link {
   font-weight: bold;
   color: #304462;
 }
 
-.regulation__info-link {
+.main__ref-link {
   display: inline-block;
   padding-bottom: 3px;
   position: relative;
   z-index: 15;
 }
 
-.regulation__info-link::before, .regulation__info-link:visited  {
+.main__ref-link::before, .main__ref-link:visited  {
   background-image: linear-gradient(to top, #fff 25%, rgba(0, 0, 0, 0) 40%);
   bottom: 2px;
   content: "";
@@ -62,15 +63,15 @@
   z-index: -1;
 }
 
-.regulation__info-link:hover::before {
+.main__ref-link:hover::before {
   width: 0;
 }
 
-.regulation__info-link::before {
+.main__ref-link::before {
   transition: width 0.1s ease-out;
 }
 
-.regulation__info-link:hover::before {
+.main__ref-link:hover::before {
   transition-duration: 0.15s;
 }
 
