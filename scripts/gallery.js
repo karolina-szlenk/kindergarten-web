@@ -30,12 +30,12 @@ const gallery = [
 
 const mainDescription = document.querySelector(".main__description");
 const div = document.createElement("div");
-div.classList.add("info__container", "info__container--modifier");
+div.classList.add("item__container", "item__container--modifier");
 gallery.forEach(function (item) {
   const article = document.createElement("article");
-  article.classList.add("info__element");
+  article.classList.add("item__element");
   const heading = document.createElement("h3");
-  heading.classList.add("info__title");
+  heading.classList.add("item__title");
   heading.innerText = item.name;
   const picturesContainer = document.createElement("div");
   picturesContainer.classList.add("gallery");
@@ -45,7 +45,7 @@ gallery.forEach(function (item) {
     link.setAttribute("href", el);
     const img = document.createElement("img");
     img.setAttribute("src", el);
-    img.classList.add("info__image");
+    img.classList.add("item__image");
     link.classList.add("image");
     if (index > 0) {
       link.classList.add("hide");
