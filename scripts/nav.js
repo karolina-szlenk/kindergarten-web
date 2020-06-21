@@ -33,6 +33,4 @@ function navBarDisplay(state, menu, items) {
   }
 }
 
-window.onload = function() {
-    changeNavBarVisibility()
-};
+changeNavBarVisibility()

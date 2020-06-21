@@ -20,11 +20,10 @@
     <link rel="stylesheet" href="./css/nav.css" />
     <link rel="stylesheet" href="./css/hero.css" />
     <link rel="stylesheet" href="./css/info.css" />
-    <link rel="stylesheet" href="./css/about.css" />
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/contact.css" />
-    <link rel="stylesheet" href="./css/regulations.css" />
-    <link rel="stylesheet" href="./css/downloads.css" />
+    <link rel="stylesheet" href="./css/gallery.css" />
+    <link rel="stylesheet" href="./css/menu.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
@@ -90,36 +89,30 @@
     </header>
     <main>
       <section class="meadow top"></section>
-      <section class="downloads">
+      <section class="main">
         <div class="container">
-          <h3 class="regulation__title">Do pobrania</h3>
-          <div class="downloads__wrapper">
-            <a download="Regulamin Przedszkola.pdf" id="regulation"
-              ><button class="about__btn about__btn--modifier">
+          <h3 class="main__title">Do pobrania</h3>
+          <div class="main__description">
+            <a download="Regulamin Przedszkola.pdf" class="link link--break" id="regulation">
+              <button class="main__btn main__btn--modifier">
                 <i class="fa fa-download"></i> Regulamin Przedszkola
-              </button></a
-            >
-          </div>
-          <div class="downloads__wrapper">
-            <a download="Karta Informacyjna Dziecka.pdf" id="kids-card"
-              ><button class="about__btn about__btn--modifier">
+              </button>
+            </a>
+            <a download="Karta Informacyjna Dziecka.pdf" class="link link--break" id="kids-card">
+              <button class="main__btn main__btn--modifier">
                 <i class="fa fa-download"></i> Karta informacyjna dziecka
-              </button></a
-            >
-          </div>
-          <div class="downloads__wrapper">
-            <a download="Regulamin Przedszkola.pdf" id="statute"
-              ><button class="about__btn about__btn--modifier">
+              </button>
+            </a>
+            <a download="Regulamin Przedszkola.pdf" class="link link--break" id="statute">
+              <button class="main__btn main__btn--modifier">
                 <i class="fa fa-download"></i> Statut Przedszkola
-              </button></a
-            >
-          </div>
-          <div class="downloads__wrapper">
-            <a download="Klauzula Informacyjna.pdf" id="rodo"
-              ><button class="about__btn about__btn--modifier">
+              </button>
+            </a>
+            <a download="Klauzula Informacyjna.pdf" class="link" id="rodo">
+              <button class="main__btn main__btn--modifier">
                 <i class="fa fa-download"></i> Klauzula Informacyjna
-              </button></a
-            >
+              </button>
+            </a>
           </div>
         </div>
       </section>
@@ -127,7 +120,7 @@
     </main>
     <footer>
       <div class="container">
-        <h3 class="about__title">Kontakt</h3>
+        <h3 class="main__title">Kontakt</h3>
         <section class="contact" id="contact">
           <div class="contact__element">
             <i class="contact__icon fas fa-map-marker-alt fa-2x"></i>

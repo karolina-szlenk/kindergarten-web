@@ -4,7 +4,7 @@
   --primary-color: #30bd56;
   --secondary-color: #fff;
   --third-color: #7aabf7;
-  --forth-color: #ff2a2a;
+  --forth-color: #97ddaa;
   --fifth-color: #304462;
 }
 
@@ -41,8 +41,8 @@ a {
 }
 
 .main {
-  background-color: #97ddaa;
-  color: #304462;
+  background-color: var(--forth-color);
+  color: var(--fifth-color);
   text-align: center;
 }
 
@@ -56,6 +56,12 @@ a {
 
 .link {
   text-align: center;
+  display: block;
+  padding: 0;
+}
+
+.link--break {
+  padding: 0 0 1.5rem;
 }
 
 .main__description {
@@ -65,9 +71,18 @@ a {
   padding: 3rem 0;
 }
 
-.main__text {
+.main__content--center {
+  justify-content: center;
+}
+
+.main__content {
   text-align: left;
   margin: 1.5rem 0;
+  display: flex;
+}
+
+.main__content--column {
+  flex-direction: column;
 }
 
 .main__title {
@@ -79,9 +94,92 @@ a {
   text-transform: uppercase;
 }
 
+.main__title--smaller {
+  font-size: 1.8rem;
+  line-height: 2rem;
+  padding: 0;
+}
+
 .main__subtitle {
   font-size: 1.2rem;
   font-weight: bold;
+  min-width: 2rem;
+}
+
+.main__subtitle--wider {
+  min-width: 10rem;
+}
+
+.main__btn {
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  color: var(--fifth-color);
+  cursor: pointer;
+  font-family: var(--primary-font);
+  font-size: 1.2rem;
+  font-weight: 500;
+  height: 4rem;
+  letter-spacing: 2px;
+  outline: none;
+  width: 15rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+}
+
+.main__btn--modifier {
+  width: 23rem;
+}
+
+.main__btn:hover {
+  background-color: #e4eefd;
+  box-shadow: 0px 15px 20px rgba(48, 68, 98, 0.4);
+  color: var(--fifth-color);
+  transform: translateY(-7px);
+}
+
+.main__ref {
+  margin-top: 3rem;
+  text-align: left;
+}
+
+.main__ref-link {
+  font-weight: bold;
+  color: var(--fifth-color);
+}
+
+.main__ref-link {
+  display: inline-block;
+  padding-bottom: 3px;
+  position: relative;
+  z-index: 15;
+}
+
+.main__ref-link::before, .main__ref-link:visited  {
+  background-image: linear-gradient(to top, var(--secondary-color) 25%, rgba(0, 0, 0, 0) 40%);
+  bottom: 2px;
+  content: "";
+  height: 50%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  will-change: width;
+  transform: rotate(-2deg);
+  transform-origin: left bottom;
+  z-index: -1;
+}
+
+.main__ref-link:hover::before {
+  width: 0;
+}
+
+.main__ref-link::before {
+  transition: width 0.1s ease-out;
+}
+
+.main__ref-link:hover::before {
+  transition-duration: 0.15s;
 }
 
 .sky-top {
@@ -126,10 +224,19 @@ a {
   }
 }
 
-@media only screen and (min-width: 768px) {
-  .container {
-    max-width: 70vw;
+@media only screen and (max-width: 400px) {
+  .main__btn--modifier {
+    width: 17rem;
   }
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+  .break {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
 
   .sky-top {
     top: 65vh;
@@ -140,7 +247,25 @@ a {
   }
 }
 
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1280px) and (max-width: 1439px) {
+  .container {
+    max-width: 80vw;
+  }
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1599px) {
+  .container {
+    max-width: 70vw;
+  }
+}
+
+@media only screen and (min-width: 1600px) and (max-width: 1669px) {
+  .container {
+    max-width: 65vw;
+  }
+}
+
+@media only screen and (min-width: 1670px) {
   .container {
     max-width: 60vw;
   }

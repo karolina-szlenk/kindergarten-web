@@ -1,120 +1,124 @@
 .info {
-    width: 100%;
-    margin: 0;
-    background: url(../img/sky.svg); 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  width: 100%;
+  margin: 0;
+  background: url(../img/sky.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.info__container {
-    display: grid;
-    grid-gap: 2rem; 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    padding: 4rem 0 0rem;
+.item__container {
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  padding: 4rem 0 0rem;
+  margin: 0 auto;
 }
 
-.info__container--modifier {
+.item__container--modifier {
+  padding: 0rem;
+}
+
+.item__element:hover .item__image {
+  clip-path: circle(100%);
+}
+
+.item__element:hover {
+  transform: scale(1.05);
+}
+
+.item__text {
+  padding: 0 2rem;
+}
+
+.item__element {
+  background-color: var(--secondary-color);
+  border-radius: 1rem;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  color: var(--fifth-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1rem 0;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.item__description {
+  margin: 0;
+  padding: 1rem 0;
+  text-align: left;
+  line-height: 2rem;
+}
+
+.item__image {
+  display: block;
+  height: auto;
+  margin: 0;
+  max-width: 100%;
+  padding-top: 1rem;
+  transition: clip-path 700ms ease-in-out;
+  clip-path: circle(13rem at 7rem 14rem);
+  -webkit-clip-path: circle(13rem at 7rem 14rem);
+}
+
+.item__image:hover {
+  clip-path: circle(100%);
+}
+
+.item__title {
+  font-family: var(--primary-font);
+  font-size: 1.8rem;
+  margin: 0;
+  padding: 2rem 0 1rem;
+  text-transform: uppercase;
+}
+
+@media (max-width: 399px) {
+  .item__container {
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  }
+  .item__title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 499px) and (max-width: 599px) {
+
+  .item__image {
+    clip-path: circle(15rem at 10rem 17rem);
+    -webkit-clip-path: circle(15rem at 10rem 17rem);
+  }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+
+  .item__container {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+
+  .item__image {
+    clip-path: circle(17rem at 12rem 18rem);
+    -webkit-clip-path: circle(17rem at 12rem 18rem);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .item__container {
+    padding: 4rem 0;
+  }
+
+  .item__container--modifier {
     padding: 0rem;
-}
+  }
 
-.info__element:hover  .info__image{ 
-    clip-path: circle(100%);
-}
+  .item__image {
+    clip-path: circle(13rem at 10rem 15rem);
+  }
 
-.info__element:hover  { 
-     transform: scale(1.05)  
-}
-
-.info__text {
-    padding: 0 2rem;
-}
-
-.info__element {
-    background-color: #fff;
-    border-radius: 1rem;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    color: #304462;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 1rem 0;
-    overflow: hidden;
-    width: 100%;
-    text-align: center; 
-    transition: transform 0.2s ease-in-out;
-}
-
-.info__description {
-    margin: 0;
-    padding: 1rem 0;
-    text-align: left;
-    line-height: 2rem;
-}
-
-.info__image {
-    display: block;
-    height: auto;
-    margin: 0;  
-    max-width: 100%;
-    padding-top: 1rem;
-    transition: clip-path 700ms ease-in-out;
-    clip-path: circle(13rem at 7rem 14rem);
-    -webkit-clip-path:circle(13rem at 7rem 14rem);
-}
-
-.info__image:hover {
-    clip-path: circle(100%);
-}
-
-.info__title {
-    font-family: var(--primary-font);
-    font-size: 1.8rem;  
-    margin: 0;
-    padding: 2rem 0 1rem;
-    text-transform: uppercase;    
-}
-
-@media only screen and (max-width: 399px) {
-
-    .info__container {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-
-    .info__title {
-        font-size: 1.8rem;  
-    }
-
-    .info__image {
-        clip-path:circle(13rem at 8rem 14rem);    
-    }
-}
-
-@media only screen and (min-width: 400px) and (max-width: 599px) {
-
-    .info__image {
-        clip-path:circle(13rem at 8rem 14rem);    
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    .info__container {
-        padding: 4rem 0;
-    } 
-
-    .info__container--modifier {
-        padding: 0rem;
-    }
-
-    .info__image {
-        clip-path:circle(11rem at 9rem 12rem); 
-    }
-
-    .info__title {
-        padding: 2rem 2rem 1rem;
-    }
-}
-
-@media only screen and (min-width: 1300px) {
-    
+  .item__title {
+    padding: 2rem 2rem 1rem;
+  }
 }
