@@ -232,7 +232,7 @@ a {
 
 @media (min-width: 500px) and (orientation: landscape) {
   .break {
-    display: none;
+    padding-right: 0.5rem;
   }
 }
 
