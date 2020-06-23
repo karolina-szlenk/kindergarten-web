@@ -86,12 +86,12 @@ footer {
         flex-direction: row;
     }
 
-    .break {
-        display: none;
-    }
-
     .footer__divider{
         display: block;
         padding: 0 0.5rem;
+    }
+
+    .footer__text{
+        display: flex;
     }
 }
