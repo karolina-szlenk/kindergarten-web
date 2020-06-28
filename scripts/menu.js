@@ -1,6 +1,14 @@
+//change of meals and data required once a week
+const mainContent = document.querySelector('.main__description')
+
 const menu = [
   {
     day: 'Poniedziałek',
+    img:
+      {
+        src:'../img/menu-monday.png',
+        alt: 'menu-poniedziałek'
+      },
     meals: [
       {
         breakfast:
@@ -14,6 +22,11 @@ const menu = [
   },
   {
     day: 'Wtorek',
+    img:
+      {
+        src:'../img/menu-monday.png',
+        alt: 'menu-wtorek'
+      },
     meals: [
       {
         breakfast:
@@ -27,6 +40,11 @@ const menu = [
   },
   {
     day: 'Środa',
+    img:
+      {
+        src:'../img/menu-monday.png',
+        alt: 'menu-środa'
+      },
     meals: [
       {
         breakfast:
@@ -40,6 +58,11 @@ const menu = [
   },
   {
     day: 'Czwartek',
+    img:
+      {
+        src:'../img/menu-monday.png',
+        alt: 'menu-czwartek'
+      },
     meals: [
       {
         breakfast:
@@ -53,6 +76,11 @@ const menu = [
   },
   {
     day: 'Piątek',
+    img:
+      {
+        src:'../img/menu-monday.png',
+        alt: 'menu-piątek'
+      },
     meals: [
       {
         breakfast:
@@ -71,44 +99,54 @@ const setCurrentData = function () {
   data.innerHTML = '1-5.06.2020'
 }
 
-setCurrentData()
+const generateMenu = function () {
+  menu.forEach((day) => {
+    const menuCell = document.createElement('div')
+    menuCell.classList.add('menu__row', 'menu__cell')
 
-const mainContent = document.querySelector('.main__description')
+    const menuDay = document.createElement('div')
+    menuDay.classList.add('menu__day')
 
-menu.forEach((day) => {
-  const menuCell = document.createElement('div')
-  menuCell.classList.add('menu__row', 'menu__cell')
+    const menuImg = document.createElement("img")
+    menuImg.classList.add('menu__img')
+    menuImg.setAttribute("src", day.img.src);
+    menuImg.setAttribute("alt", day.img.alt);
+    menuDay.appendChild(menuImg)
 
-  const menuDay = document.createElement('div')
-  menuDay.classList.add('menu__day')
+    menuCell.appendChild(menuDay)
 
-  const menuCol = document.createElement('div')
-  menuCol.classList.add('menu__col')
+    const menuCol = document.createElement('div')
+    menuCol.classList.add('menu__col')
+    menuCell.appendChild(menuCol)
 
-  day.meals.forEach((item, index) => {
-    const menuRow = document.createElement('div')
-    menuRow.classList.add('menu__row')
+    day.meals.forEach((item) => {
+      const menuRow = document.createElement('div')
+      menuRow.classList.add('menu__row')
 
-    const menuMeal = document.createElement('p')
-    menuMeal.classList.add('menu__row__name')
+      const menuMeal = document.createElement('p')
+      menuMeal.classList.add('menu__row__name')
 
-    const menuDescription = document.createElement('div')
-    menuDescription.classList.add('menu__row__description', 'menu__row__description--modifier')
+      const menuDescription = document.createElement('div')
+      menuDescription.classList.add('menu__row__description', 'menu__row__description--modifier')
 
-    if ('breakfast' in item) {
-      menuMeal.innerText = 'Śniadanie'
-      menuDescription.innerText = item.breakfast
-    } else {
-      menuMeal.innerText = 'Obiad'
-      menuDescription.innerText = item.dinner   
-    }
+      if ('breakfast' in item) {
+        menuMeal.innerText = 'Śniadanie'
+        menuDescription.innerText = item.breakfast
+      } else {
+        menuMeal.innerText = 'Obiad'
+        menuDescription.innerText = item.dinner
+      }
+
+      menuRow.appendChild(menuMeal)
+      menuRow.appendChild(menuDescription)
+      menuCol.appendChild(menuRow)
+    })
+
     
-    menuRow.appendChild(menuMeal)
-    menuRow.appendChild(menuDescription)
-    menuCol.appendChild(menuRow)
-  })
 
-  menuCell.appendChild(menuDay)
-  menuCell.appendChild(menuCol)
-  mainContent.appendChild(menuCell)
-})
+    mainContent.appendChild(menuCell)
+  })
+}
+
+setCurrentData()
+generateMenu()
