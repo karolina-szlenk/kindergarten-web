@@ -5,7 +5,7 @@ const navItems = [
   { href: "news.html", text: "Aktualności" },
   {
     href: "recruitment.html",
-    text: "Rekrutacja",
+    text: "Rekrutacja ",
     icon: null,
     sublinks: [
       { href: "regulations.html", text: "Regulamin" },
@@ -15,7 +15,7 @@ const navItems = [
   },
   {
     href: "about.html",
-    text: "O nas",
+    text: "O nas ",
     icon: null,
     sublinks: [
       { href: "classess.html", text: "Zajęcia" },
