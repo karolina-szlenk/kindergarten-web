@@ -4,11 +4,10 @@ const mainContent = document.querySelector('.main__description')
 const menu = [
   {
     day: 'Poniedziałek',
-    img:
-      {
-        src:'../img/menu-monday.png',
-        alt: 'menu-poniedziałek'
-      },
+    img: {
+      src: '../img/menu-monday.png',
+      alt: 'menu-poniedziałek',
+    },
     meals: [
       {
         breakfast:
@@ -22,11 +21,10 @@ const menu = [
   },
   {
     day: 'Wtorek',
-    img:
-      {
-        src:'../img/menu-monday.png',
-        alt: 'menu-wtorek'
-      },
+    img: {
+      src: '../img/menu-tuesday.png',
+      alt: 'menu-wtorek',
+    },
     meals: [
       {
         breakfast:
@@ -40,11 +38,10 @@ const menu = [
   },
   {
     day: 'Środa',
-    img:
-      {
-        src:'../img/menu-monday.png',
-        alt: 'menu-środa'
-      },
+    img: {
+      src: '../img/menu-wednesday.png',
+      alt: 'menu-środa',
+    },
     meals: [
       {
         breakfast:
@@ -58,11 +55,10 @@ const menu = [
   },
   {
     day: 'Czwartek',
-    img:
-      {
-        src:'../img/menu-monday.png',
-        alt: 'menu-czwartek'
-      },
+    img: {
+      src: '../img/menu-thursday.png',
+      alt: 'menu-czwartek',
+    },
     meals: [
       {
         breakfast:
@@ -76,11 +72,10 @@ const menu = [
   },
   {
     day: 'Piątek',
-    img:
-      {
-        src:'../img/menu-monday.png',
-        alt: 'menu-piątek'
-      },
+    img: {
+      src: '../img/menu-friday.png',
+      alt: 'menu-piątek',
+    },
     meals: [
       {
         breakfast:
@@ -107,10 +102,14 @@ const generateMenu = function () {
     const menuDay = document.createElement('div')
     menuDay.classList.add('menu__day')
 
-    const menuImg = document.createElement("img")
+    const menuCircle = document.createElement('div')
+    menuCircle.classList.add('menu__circle')
+    menuDay.appendChild(menuCircle)
+
+    const menuImg = document.createElement('img')
     menuImg.classList.add('menu__img')
-    menuImg.setAttribute("src", day.img.src);
-    menuImg.setAttribute("alt", day.img.alt);
+    menuImg.setAttribute('src', day.img.src)
+    menuImg.setAttribute('alt', day.img.alt)
     menuDay.appendChild(menuImg)
 
     menuCell.appendChild(menuDay)
@@ -142,11 +141,11 @@ const generateMenu = function () {
       menuCol.appendChild(menuRow)
     })
 
-    
-
     mainContent.appendChild(menuCell)
   })
 }
 
-setCurrentData()
-generateMenu()
+window.onload = function () {
+  setCurrentData()
+  generateMenu()
+}
