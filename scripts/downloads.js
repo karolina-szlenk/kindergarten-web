@@ -11,6 +11,10 @@ const data = [
     file: "./downloads/Statut Przedszkola.pdf",
     link: document.querySelector("#statute"),
   },
+  {
+    file: "./downloads/Klauzula Informacyjna.pdf",
+    link: document.querySelector("#rodo"),
+  },
 ];
 
 for (let i = 0; i < data.length; i++) {
