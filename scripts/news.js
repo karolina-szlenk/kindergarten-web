@@ -10,17 +10,19 @@ class Entry {
     this.description = description
     this.article = null
     this.link = null
+    this.wrap = null
     this.printSingleArticle()
   }
 
   generateSingleArticle() {
     this.article = document.createElement('article')
     this.article.classList.add('news__wrapper')
+  }
 
-    this.link = document.createElement('a')
-    this.link.classList.add('news__link')
-    this.link.setAttribute('href', this.href)
-    this.article.appendChild(this.link)
+  generateWrap() {
+    this.wrap = document.createElement('div')
+    this.wrap.classList.add('news__link')
+    this.article.appendChild(this.wrap)
   }
 
   generateImage() {
@@ -32,7 +34,7 @@ class Entry {
     img.setAttribute('alt', this.alt)
     imgContainer.appendChild(img)
 
-    this.link.appendChild(imgContainer)
+    this.wrap.appendChild(imgContainer)
   }
 
   generateContent() {
@@ -54,7 +56,7 @@ class Entry {
     newsDescription.innerText = this.reduceText(this.description)
     contentContainer.appendChild(newsDescription)
 
-    this.link.appendChild(contentContainer)
+    this.wrap.appendChild(contentContainer)
   }
 
   printDate() {
@@ -79,34 +81,33 @@ class Entry {
   }
 
   printSingleArticle() {
-    const wrapper = document.querySelector('.main__description')
-
     this.generateSingleArticle()
-    wrapper.appendChild(this.article)
-
+    this.generateWrap()
     this.generateImage()
     this.generateContent()
   }
 }
 
-const entry1 = new Entry(
-  'przedszkolaki.html',
-  20,
-  4,
-  2020,
-  '../img/edu.jpg',
-  'lala',
-  'Przedszkolaki',
-  'Lorem ipsum.'
-)
+class SneakPeek extends Entry {
+  generateLink() {
+    this.link = document.createElement('a')
+    this.link.setAttribute('href', this.href)
+    this.article.prepend(this.link)
+  }
 
-const entry2 = new Entry(
-  'przedszkolaki-wracaja.html',
-  25,
-  5,
-  2020,
-  '../img/pencils.jpg',
-  'penc',
-  'Przedszkolaki wracają do szkoły',
-  'Mauris tristique massa vulputate arcu vestibulum, et consectetur diam pellentesque. Nulla facilisis bibendum turpis, et finibus magna semper at. Phasellus iaculis metus sit amet sagittis auctor. Vestibulum hendrerit augue vel ullamcorper molestie. Nulla eget velit arcu. Morbi id eros quis arcu ornare ultricies. Aenean leo magna, consectetur ut sapien in, efficitur gravida enim. Ut pellentesque metus at orci mollis, quis faucibus diam imperdiet. Maecenas est massa, mollis quis varius ac, fringilla at diam.'
-)
+  printSingleArticle() {
+    super.printSingleArticle()
+    const wrapper = document.querySelector('.main__description')
+    wrapper.prepend(this.article)
+    this.generateLink()
+    this.link.append(this.wrap)
+  }
+}
+
+class News extends Entry {
+  printSingleArticle() {
+    super.printSingleArticle()
+    const wrapper = document.querySelector('.main__article')
+    wrapper.prepend(this.article)
+  }
+}
