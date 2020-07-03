@@ -42,21 +42,21 @@
 }
 
 .nav-bar__links__item:hover .nav-bar__single-link {
-  color: var(--fifth-color);
+  color: var(--third-color);
 }
 
 .nav-bar__links__item:hover .nav-bar__sublinks .nav-bar__single-link {
-  color: var(--third-color);
+  color: var(--fifth-color);
 }
 
 .nav-bar__single-link {
-  color: var(--third-color);
+  color: var(--fifth-color);
   align-self: center;
   padding: 1rem 2rem;
 }
 
 .nav-bar__links .nav-bar__links__item .nav-bar__sublinks .nav-bar__links__item:hover .nav-bar__single-link {
-  color: var(--fifth-color);
+  color: var(--third-color);
 }
 
 .nav-bar__sublinks {
