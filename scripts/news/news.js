@@ -98,7 +98,9 @@ class SneakPeek extends Entry {
   printSingleArticle() {
     super.printSingleArticle()
     const wrapper = document.querySelector('.main__description')
-    wrapper.prepend(this.article)
+    if (wrapper) {
+      wrapper.prepend(this.article)
+    }
     this.generateLink()
     this.link.append(this.wrap)
   }
@@ -108,6 +110,9 @@ class News extends Entry {
   printSingleArticle() {
     super.printSingleArticle()
     const wrapper = document.querySelector('.main__article')
-    wrapper.prepend(this.article)
+    if (wrapper) {
+      wrapper.prepend(this.article)
+    }
   }
 }
+
