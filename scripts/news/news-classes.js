@@ -10,17 +10,18 @@ class Entry {
     this.description = description
     this.article = null
     this.link = null
+    this.wrap = null
     this.printSingleArticle()
   }
 
   generateSingleArticle() {
     this.article = document.createElement('article')
-    this.article.classList.add('news__wrapper')
+  }
 
-    this.link = document.createElement('a')
-    this.link.classList.add('news__link')
-    this.link.setAttribute('href', this.href)
-    this.article.appendChild(this.link)
+  generateWrap() {
+    this.wrap = document.createElement('div')
+    this.wrap.classList.add('news__link')
+    this.article.appendChild(this.wrap)
   }
 
   generateImage() {
@@ -32,7 +33,7 @@ class Entry {
     img.setAttribute('alt', this.alt)
     imgContainer.appendChild(img)
 
-    this.link.appendChild(imgContainer)
+    this.wrap.appendChild(imgContainer)
   }
 
   generateContent() {
@@ -51,16 +52,43 @@ class Entry {
 
     const newsDescription = document.createElement('div')
     newsDescription.classList.add('news__short-description')
-    newsDescription.innerText = this.reduceText(this.description)
+    newsDescription.innerText = this.description
     contentContainer.appendChild(newsDescription)
 
-    this.link.appendChild(contentContainer)
+    this.wrap.appendChild(contentContainer)
   }
 
   printDate() {
     const datePublication = new Array(this.year, this.month, this.day).join(',')
     const dateFormatted = new Date(datePublication).toLocaleDateString('pl-PL')
     return dateFormatted
+  }
+
+  printSingleArticle() {
+    this.generateSingleArticle()
+    this.generateWrap()
+    this.generateImage()
+    this.generateContent()
+  }
+}
+
+class SneakPeek extends Entry {
+  generateLink() {
+    this.link = document.createElement('a')
+    this.link.setAttribute('href', this.href)
+    this.article.prepend(this.link)
+  }
+
+  generateSingleArticle() {
+    super.generateSingleArticle()
+    this.article.classList.add('news__wrapper')
+  }
+
+  generateShortDescription() {
+    const newsDescription = document.querySelector('.news__short-description')
+    if (newsDescription) {
+      newsDescription.innerText = this.reduceText(this.description)
+    }
   }
 
   reduceText(txt) {
@@ -79,34 +107,43 @@ class Entry {
   }
 
   printSingleArticle() {
+    super.printSingleArticle()
     const wrapper = document.querySelector('.main__description')
-
-    this.generateSingleArticle()
-    wrapper.appendChild(this.article)
-
-    this.generateImage()
-    this.generateContent()
+    if (wrapper) {
+      wrapper.prepend(this.article)
+    }
+    this.generateLink()
+    this.link.append(this.wrap)
+    this.generateShortDescription()
   }
 }
 
-const entry1 = new Entry(
-  'przedszkolaki.html',
-  20,
-  4,
-  2020,
-  '../img/edu.jpg',
-  'lala',
-  'Przedszkolaki',
-  'Lorem ipsum.'
-)
+class News extends Entry {
+  addNewsDetailsView() {
+    const contentContainer = document.querySelector('.news__link')
+    const newsTitle = document.querySelector('.news__title')
+    if (contentContainer) {
+      contentContainer.classList.add('news__details')
+    }
+    if (newsTitle) {
+      newsTitle.classList.add('news__title-details')
+    }
+  }
 
-const entry2 = new Entry(
-  'przedszkolaki-wracaja.html',
-  25,
-  5,
-  2020,
-  '../img/pencils.jpg',
-  'penc',
-  'Przedszkolaki wracają do szkoły',
-  'Mauris tristique massa vulputate arcu vestibulum, et consectetur diam pellentesque. Nulla facilisis bibendum turpis, et finibus magna semper at. Phasellus iaculis metus sit amet sagittis auctor. Vestibulum hendrerit augue vel ullamcorper molestie. Nulla eget velit arcu. Morbi id eros quis arcu ornare ultricies. Aenean leo magna, consectetur ut sapien in, efficitur gravida enim. Ut pellentesque metus at orci mollis, quis faucibus diam imperdiet. Maecenas est massa, mollis quis varius ac, fringilla at diam.'
-)
+  addImageStyle() {
+    const imgContainer = document.querySelector('.news__img')
+    if (imgContainer) {
+      imgContainer.classList.add('news__img-details')
+    }
+  }
+
+  printSingleArticle() {
+    super.printSingleArticle()
+    const wrapper = document.querySelector('.main__article')
+    if (wrapper) {
+      wrapper.prepend(this.article)
+    }
+    this.addNewsDetailsView()
+    this.addImageStyle()
+  }
+}

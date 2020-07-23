@@ -182,6 +182,13 @@ a {
   transition-duration: 0.15s;
 }
 
+.main__article {
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+  margin: 0;
+  padding: 3rem 0;
+}
+
 .sky-top {
   background: url(../img/sky-top.svg);
   margin-top: -30px;
