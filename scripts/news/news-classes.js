@@ -16,7 +16,6 @@ class Entry {
 
   generateSingleArticle() {
     this.article = document.createElement('article')
-    this.article.classList.add('news__wrapper')
   }
 
   generateWrap() {
@@ -53,7 +52,7 @@ class Entry {
 
     const newsDescription = document.createElement('div')
     newsDescription.classList.add('news__short-description')
-    newsDescription.innerText = this.reduceText(this.description)
+    newsDescription.innerText = this.description
     contentContainer.appendChild(newsDescription)
 
     this.wrap.appendChild(contentContainer)
@@ -63,6 +62,33 @@ class Entry {
     const datePublication = new Array(this.year, this.month, this.day).join(',')
     const dateFormatted = new Date(datePublication).toLocaleDateString('pl-PL')
     return dateFormatted
+  }
+
+  printSingleArticle() {
+    this.generateSingleArticle()
+    this.generateWrap()
+    this.generateImage()
+    this.generateContent()
+  }
+}
+
+class SneakPeek extends Entry {
+  generateLink() {
+    this.link = document.createElement('a')
+    this.link.setAttribute('href', this.href)
+    this.article.prepend(this.link)
+  }
+
+  generateSingleArticle() {
+    super.generateSingleArticle()
+    this.article.classList.add('news__wrapper')
+  }
+
+  generateShortDescription() {
+    const newsDescription = document.querySelector('.news__short-description')
+    if (newsDescription) {
+      newsDescription.innerText = this.reduceText(this.description)
+    }
   }
 
   reduceText(txt) {
@@ -81,21 +107,6 @@ class Entry {
   }
 
   printSingleArticle() {
-    this.generateSingleArticle()
-    this.generateWrap()
-    this.generateImage()
-    this.generateContent()
-  }
-}
-
-class SneakPeek extends Entry {
-  generateLink() {
-    this.link = document.createElement('a')
-    this.link.setAttribute('href', this.href)
-    this.article.prepend(this.link)
-  }
-
-  printSingleArticle() {
     super.printSingleArticle()
     const wrapper = document.querySelector('.main__description')
     if (wrapper) {
@@ -103,16 +114,36 @@ class SneakPeek extends Entry {
     }
     this.generateLink()
     this.link.append(this.wrap)
+    this.generateShortDescription()
   }
 }
 
 class News extends Entry {
+  addNewsDetailsView() {
+    const contentContainer = document.querySelector('.news__link')
+    const newsTitle = document.querySelector('.news__title')
+    if (contentContainer) {
+      contentContainer.classList.add('news__details')
+    }
+    if (newsTitle) {
+      newsTitle.classList.add('news__title-details')
+    }
+  }
+
+  addImageStyle() {
+    const imgContainer = document.querySelector('.news__img')
+    if (imgContainer) {
+      imgContainer.classList.add('news__img-details')
+    }
+  }
+
   printSingleArticle() {
     super.printSingleArticle()
     const wrapper = document.querySelector('.main__article')
     if (wrapper) {
       wrapper.prepend(this.article)
     }
+    this.addNewsDetailsView()
+    this.addImageStyle()
   }
 }
-
