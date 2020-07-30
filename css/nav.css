@@ -192,7 +192,7 @@
   .nav-bar {
     align-items: center;
     flex-direction: row;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .nav-bar__links {
@@ -236,5 +236,3 @@
   }
 }
 
-@media only screen and (min-width: 1366px) {
-}
