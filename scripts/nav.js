@@ -4,20 +4,20 @@ const navItems = [
   { href: "index.html", text: "Strona główna" },
   { href: "news.html", text: "Aktualności" },
   {
-    href: "recruitment.html",
-    text: "Rekrutacja ",
+    text: "Organizacja ",
     icon: null,
     sublinks: [
+      { href: "recruitment.html", text: "Rekrutacja" },
       { href: "regulations.html", text: "Regulamin" },
       { href: "downloads.html", text: "Do pobrania" },
       { href: "rodo.html", text: "RODO" },
     ],
   },
   {
-    href: "about.html",
-    text: "O nas ",
+    text: "Przedszkole ",
     icon: null,
     sublinks: [
+      { href: "about.html", text: "O nas" },
       { href: "classess.html", text: "Zajęcia" },
       { href: "plan.html", text: "Plan dnia" },
       { href: "menu.html", text: "Jadłospis" },
@@ -49,7 +49,9 @@ function generateNav() {
     navItem.classList.add("nav-bar__links__item");
 
     navLink = document.createElement("a");
-    navLink.setAttribute("href", item.href);
+    if (item.href) {
+      navLink.setAttribute("href", item.href);
+    }
     navLink.classList.add("nav-bar__single-link");
     navLink.innerText = item.text;
     navItem.appendChild(navLink);
