@@ -1,142 +1,142 @@
-const header = document.querySelector(".nav-bar");
+const header = document.querySelector('.nav-bar')
 
 const navItems = [
-  { href: "index.html", text: "Strona główna" },
-  { href: "news.html", text: "Aktualności" },
+  { href: 'index.html', text: 'Strona główna' },
+  { href: 'news.html', text: 'Aktualności' },
   {
-    text: "Organizacja ",
+    text: 'Organizacja ',
     icon: null,
     sublinks: [
-      { href: "recruitment.html", text: "Rekrutacja" },
-      { href: "regulations.html", text: "Regulamin" },
-      { href: "downloads.html", text: "Do pobrania" },
-      { href: "rodo.html", text: "RODO" },
+      { href: 'recruitment.html', text: 'Rekrutacja' },
+      { href: 'regulations.html', text: 'Regulamin' },
+      { href: 'downloads.html', text: 'Do pobrania' },
+      { href: 'rodo.html', text: 'RODO' },
     ],
   },
   {
-    text: "Przedszkole ",
+    text: 'Przedszkole ',
     icon: null,
     sublinks: [
-      { href: "about.html", text: "O nas" },
-      { href: "classess.html", text: "Zajęcia" },
-      { href: "plan.html", text: "Plan dnia" },
-      { href: "menu.html", text: "Jadłospis" },
+      { href: 'about.html', text: 'O nas' },
+      { href: 'classess.html', text: 'Zajęcia' },
+      { href: 'plan.html', text: 'Plan dnia' },
+      { href: 'menu.html', text: 'Jadłospis' },
     ],
   },
-  { href: "gallery.html", text: "Galeria" },
-  { href: "contact.html", text: "Kontakt" },
-];
+  { href: 'gallery.html', text: 'Galeria' },
+  { href: 'contact.html', text: 'Kontakt' },
+]
 
 function generateNav() {
-  const logoLink = document.createElement("a");
-  logoLink.setAttribute("href", "index.html");
+  const logoLink = document.createElement('a')
+  logoLink.setAttribute('href', 'index.html')
 
-  const logoImg = document.createElement("img");
-  logoImg.classList.add("nav-bar__logo");
-  logoImg.setAttribute("src", "./img/logo.png");
-  logoImg.setAttribute("alt", "logo");
-  logoLink.appendChild(logoImg);
+  const logoImg = document.createElement('img')
+  logoImg.classList.add('nav-bar__logo')
+  logoImg.setAttribute('src', './img/logo.png')
+  logoImg.setAttribute('alt', 'logo')
+  logoLink.appendChild(logoImg)
 
-  const nav = document.createElement("nav"),
-        list = document.createElement("ul");
+  const nav = document.createElement('nav'),
+    list = document.createElement('ul')
 
-  let navItem, navLink, ul, subNavItem;
+  let navItem, navLink, ul, subNavItem
 
-  list.classList.add("nav-bar__links");
+  list.classList.add('nav-bar__links')
 
   navItems.forEach((item) => {
-    navItem = document.createElement("li");
-    navItem.classList.add("nav-bar__links__item");
+    navItem = document.createElement('li')
+    navItem.classList.add('nav-bar__links__item')
 
-    navLink = document.createElement("a");
+    navLink = document.createElement('a')
     if (item.href) {
-      navLink.setAttribute("href", item.href);
+      navLink.setAttribute('href', item.href)
     }
-    navLink.classList.add("nav-bar__single-link");
-    navLink.innerText = item.text;
-    navItem.appendChild(navLink);
+    navLink.classList.add('nav-bar__single-link')
+    navLink.innerText = item.text
+    navItem.appendChild(navLink)
 
-    if ("icon" in item) {
-      const icon = document.createElement("i");
-      icon.classList.add("fas", "fa-caret-down");
-      navLink.appendChild(icon);
+    if ('icon' in item) {
+      const icon = document.createElement('i')
+      icon.classList.add('fas', 'fa-caret-down')
+      navLink.appendChild(icon)
     }
 
-    if ("sublinks" in item) {
-      ul = document.createElement("ul");
-      ul.classList.add("nav-bar__sublinks");
+    if ('sublinks' in item) {
+      ul = document.createElement('ul')
+      ul.classList.add('nav-bar__sublinks')
 
       item.sublinks.forEach((el) => {
-        subNavItem = document.createElement("li");
-        subNavItem.classList.add("nav-bar__links__item");
+        subNavItem = document.createElement('li')
+        subNavItem.classList.add('nav-bar__links__item')
 
-        const subNavLink = document.createElement("a");
-        subNavLink.setAttribute("href", el.href);
-        subNavLink.classList.add("nav-bar__single-link");
-        subNavLink.innerText = el.text;
-        subNavItem.appendChild(subNavLink);
+        const subNavLink = document.createElement('a')
+        subNavLink.setAttribute('href', el.href)
+        subNavLink.classList.add('nav-bar__single-link')
+        subNavLink.innerText = el.text
+        subNavItem.appendChild(subNavLink)
 
-        ul.appendChild(subNavItem);
-      });
-      navItem.appendChild(ul);
+        ul.appendChild(subNavItem)
+      })
+      navItem.appendChild(ul)
     }
-    list.appendChild(navItem);
-  });
+    list.appendChild(navItem)
+  })
 
-  nav.appendChild(list);
+  nav.appendChild(list)
 
-  const mobileMenu = document.createElement("div");
-  mobileMenu.classList.add("nav-bar__mobile");
+  const mobileMenu = document.createElement('div')
+  mobileMenu.classList.add('nav-bar__mobile')
 
-  const iconOpen = document.createElement("i"); 
-        iconClose = document.createElement("i");
+  const iconOpen = document.createElement('i')
+  iconClose = document.createElement('i')
 
-  iconOpen.classList.add("fas", "fa-ellipsis-h", "nav-bar__icon");
-  iconOpen.setAttribute("id", "open");
+  iconOpen.classList.add('fas', 'fa-ellipsis-h', 'nav-bar__icon')
+  iconOpen.setAttribute('id', 'open')
 
-  iconClose.classList.add("fas", "fa-times", "nav-bar__icon");
-  iconClose.setAttribute("id", "close");
+  iconClose.classList.add('fas', 'fa-times', 'nav-bar__icon')
+  iconClose.setAttribute('id', 'close')
 
-  mobileMenu.appendChild(iconOpen);
-  mobileMenu.appendChild(iconClose);
+  mobileMenu.appendChild(iconOpen)
+  mobileMenu.appendChild(iconClose)
 
-  header.appendChild(logoLink);
-  header.appendChild(nav);
-  header.appendChild(mobileMenu);
+  header.appendChild(logoLink)
+  header.appendChild(nav)
+  header.appendChild(mobileMenu)
 
-  changeNavBarVisibility(nav, iconOpen, iconClose);
+  changeNavBarVisibility(nav, iconOpen, iconClose)
 }
 
 const changeNavBarVisibility = function (menu, open, close) {
-  const navBarItems = document.querySelectorAll(".nav-bar__links__item");
+  const navBarItems = document.querySelectorAll('.nav-bar__links__item')
 
-  close.style.display = "none";
+  close.style.display = 'none'
 
-  open.addEventListener("click", function () {
-    this.style.display = "none";
-    close.style.display = "block";
-    navBarDisplay("show", menu, navBarItems);
-  });
+  open.addEventListener('click', function () {
+    this.style.display = 'none'
+    close.style.display = 'block'
+    navBarDisplay('show', menu, navBarItems)
+  })
 
-  close.addEventListener("click", function () {
-    this.style.display = "none";
-    open.style.display = "block";
-    navBarDisplay("hide", menu, navBarItems);
-  });
-};
+  close.addEventListener('click', function () {
+    this.style.display = 'none'
+    open.style.display = 'block'
+    navBarDisplay('hide', menu, navBarItems)
+  })
+}
 
-const navBarDisplay = function(state, menu, items) {
-  if (state === "show") {
-    menu.classList.add("show");
+const navBarDisplay = function (state, menu, items) {
+  if (state === 'show') {
+    menu.classList.add('show')
     for (let i = 0; i < items.length; i++) {
-      items[i].classList.add("show");
+      items[i].classList.add('show')
     }
   } else {
-    menu.classList.remove("show");
+    menu.classList.remove('show')
     for (let i = 0; i < items.length; i++) {
-      items[i].classList.remove("show");
+      items[i].classList.remove('show')
     }
   }
 }
 
-generateNav();
+generateNav()

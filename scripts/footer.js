@@ -105,11 +105,10 @@ function createFooter() {
     footerText.classList.add("footer__text");
     
     const txt1 = document.createElement("p");
-    txt1.classList.add("break");
     txt1.innerText = "Niepubliczne Przedszkole";
     
     const txt2 = document.createElement("p");
-    txt2.classList.add("break");
+    txt2.classList.add("footer__name");
     txt2.innerText = "ZIELONA ŁĄKA";
     
     footerText.appendChild(txt1);

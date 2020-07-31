@@ -36,12 +36,12 @@ class Slider {
   createPrevNext() {
     this.prev = document.createElement('i')
     this.prev.classList.add('slider__btn-prev')
-    this.prev.classList.add('fas', 'fa-chevron-left', 'fa-3x')
+    this.prev.classList.add('fas', 'fa-chevron-left', 'fa-2x')
     this.prev.addEventListener('click', () => this.slidePrev())
 
     this.next = document.createElement('i')
     this.next.classList.add('slider__btn-next')
-    this.next.classList.add('fas', 'fa-chevron-right', 'fa-3x')
+    this.next.classList.add('fas', 'fa-chevron-right', 'fa-2x')
     this.next.addEventListener('click', () => this.slideNext())
 
     const nav = document.createElement('div')
