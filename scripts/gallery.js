@@ -1,29 +1,36 @@
 const gallery = [
   {
-    name: "Urodzinki Lenki",
+    name: "Przedszkole",
     pictures: [
-      "https://www.taniec.walbrzych.pl/assets/spaw2/uploads/images/kopalnia-soli-wieliczka-kopalnia-wiedzy-jak-zorganizowa-urodziny-firmowej2-700-465-09-01-2018.jpg",
-      "https://www.prawo.pl/gfx/prawopl/_thumbs/pl/wkdokumenty/000/300/576/1/dzieci-00020-thinkstockphotos,oX6D62aapFTLo7bXW5mZ.jpg.webp",
-      "https://cdn.galleries.smcloud.net/t/galleries/gf-qJYe-hwyT-todU_zabawy-urodzinowe-664x442-nocrop.jpg",
-      "https://www.taniec.walbrzych.pl/assets/spaw2/uploads/images/kopalnia-soli-wieliczka-kopalnia-wiedzy-jak-zorganizowa-urodziny-firmowej2-700-465-09-01-2018.jpg",
+      "../gallery/kindergarten/pic1.jpg",
+      "../gallery/kindergarten/pic2.jpg",
+      "../gallery/kindergarten/pic3.jpg",
+      "../gallery/kindergarten/pic4.jpg",
+      "../gallery/kindergarten/pic5.jpg",
+      "../gallery/kindergarten/pic6.jpg"
     ],
   },
   {
-    name: "Wigilia 2019",
+    name: "Dzień Babci i Dziadka",
     pictures: [
-      "https://cdn.pixabay.com/photo/2018/05/16/10/11/christmas-3405368_960_720.jpg",
-      "https://www.prawo.pl/gfx/prawopl/_thumbs/pl/wkdokumenty/000/300/576/1/dzieci-00020-thinkstockphotos,oX6D62aapFTLo7bXW5mZ.jpg.webp",
-      "https://cdn.galleries.smcloud.net/t/galleries/gf-qJYe-hwyT-todU_zabawy-urodzinowe-664x442-nocrop.jpg",
-      "https://www.taniec.walbrzych.pl/assets/spaw2/uploads/images/kopalnia-soli-wieliczka-kopalnia-wiedzy-jak-zorganizowa-urodziny-firmowej2-700-465-09-01-2018.jpg",
+      "../gallery/grandparents-day/pic1.jpg",
+      "../gallery/grandparents-day/pic2.jpg",
+      "../gallery/grandparents-day/pic3.jpg",
+      "../gallery/grandparents-day/pic4.jpg",
+      "../gallery/grandparents-day/pic5.jpg",
+      "../gallery/grandparents-day/pic6.jpg",
+      "../gallery/grandparents-day/pic7.jpg",
     ],
   },
   {
-    name: "Bal karnawałowy",
+    name: "Gry i zabawy",
     pictures: [
-      "https://image.freepik.com/free-photo/funny-girl-cat-costume-touching-hair_23-2147925802.jpg",
-      "https://www.prawo.pl/gfx/prawopl/_thumbs/pl/wkdokumenty/000/300/576/1/dzieci-00020-thinkstockphotos,oX6D62aapFTLo7bXW5mZ.jpg.webp",
-      "https://cdn.galleries.smcloud.net/t/galleries/gf-qJYe-hwyT-todU_zabawy-urodzinowe-664x442-nocrop.jpg",
-      "https://www.taniec.walbrzych.pl/assets/spaw2/uploads/images/kopalnia-soli-wieliczka-kopalnia-wiedzy-jak-zorganizowa-urodziny-firmowej2-700-465-09-01-2018.jpg",
+      "../gallery/fun-and-games/pic1.jpg",
+      "../gallery/fun-and-games/pic2.jpg",
+      "../gallery/fun-and-games/pic3.jpg",
+      "../gallery/fun-and-games/pic4.jpg",
+      "../gallery/fun-and-games/pic5.jpg",
+      "../gallery/fun-and-games/pic6.jpg",
     ],
   },
 ];
