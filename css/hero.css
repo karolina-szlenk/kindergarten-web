@@ -37,39 +37,42 @@
   position: relative;
   text-align: center;
   text-transform: uppercase;
+  text-shadow: 2px 2px 8px var(--fifth-color);
 }
 
 .slider .hero__text {
   color: var(--secondary-color);
   font-family: var(--secondary-font);
+  font-weight: bold;
   font-size: 1.5rem;
   font-style: italic;
   left: -3rem;
-  line-height: 2rem;
+  line-height: 2.2rem;
   margin-top: 0;
   max-width: 80%;
   opacity: 0;
   padding: 0 4rem;
   position: relative;
   text-align: center;
+  text-shadow: 1px 1px 3px var(--fifth-color);
 }
 
 .hero__element1 {
-  background: url(../img/default-photo1.jpg);
+  background: url(../img/girl.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .hero__element2 {
-  background: url(../img/default-photo2.jpg);
+  background: url(../img/boy-flowers.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .hero__element3 {
-  background: url(../img/default-photo3.jpg);
+  background: url(../img/girl-and-boy.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -84,11 +87,12 @@
   left: -3rem;
   opacity: 0;
   transition: 2s left, 2s opacity;
-  text-shadow: 2px 2px 8px #304462;
+  letter-spacing: 2px;
 }
 
 .slider .hero__text {
   left: -3rem;
+  letter-spacing: 2px;
   opacity: 0;
   transition: 2s 1s left, 2s 1s opacity;
 }
@@ -204,7 +208,7 @@
 
   .slider .hero__title {
     font-size: 5rem;
-    line-height: 6rem;
+    line-height: 6.6rem;
   }
 
   .slider .hero__text {

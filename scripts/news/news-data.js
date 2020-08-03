@@ -3,7 +3,7 @@ export const entry1 = {
   day: 20,
   month: 4,
   year: 2020,
-  src: '../img/edu.jpg',
+  src: '../../img/artistic-kid.jpg',
   alt: 'lala',
   title: 'Przedszkolaki',
   description: `Lorem ipsum. Mauris tristique massa vulputate arcu vestibulum, et consectetur diam pellentesque. Nulla facilisis bibendum turpis, et finibus magna semper at. Phasellus iaculis metus sit amet sagittis auctor. Vestibulum hendrerit augue vel ullamcorper molestie. Nulla eget velit arcu. 
@@ -16,7 +16,7 @@ export const entry2 = {
   day: 25,
   month: 5,
   year: 2020,
-  src: '../img/pencils.jpg',
+  src: '../../img/artistic-kid.jpg',
   alt: 'penc',
   title: 'Przedszkolaki wracają do szkoły',
   description:
