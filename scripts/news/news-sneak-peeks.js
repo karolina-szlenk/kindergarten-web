@@ -1,4 +1,4 @@
-import { entry1, entry2 } from './news-data.js'
+import { entry1 } from './news-data.js'
 
 const sneakPeek1 = new SneakPeek(
   entry1.href,
@@ -9,15 +9,4 @@ const sneakPeek1 = new SneakPeek(
   entry1.alt,
   entry1.title,
   entry1.description
-)
-
-const sneakPeek2 = new SneakPeek(
-  entry2.href,
-  entry2.day,
-  entry2.month,
-  entry2.year,
-  entry2.src,
-  entry2.alt,
-  entry2.title,
-  entry2.description
 )

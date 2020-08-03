@@ -1,24 +1,16 @@
 export const entry1 = {
-  href: 'przedszkolaki.html',
-  day: 20,
-  month: 4,
+  href: 'przerwa-wakacyjna-3-31-08-2020.html',
+  day: 30,
+  month: 7,
   year: 2020,
-  src: '../../img/artistic-kid.jpg',
-  alt: 'lala',
-  title: 'Przedszkolaki',
-  description: `Lorem ipsum. Mauris tristique massa vulputate arcu vestibulum, et consectetur diam pellentesque. Nulla facilisis bibendum turpis, et finibus magna semper at. Phasellus iaculis metus sit amet sagittis auctor. Vestibulum hendrerit augue vel ullamcorper molestie. Nulla eget velit arcu. 
+  src: '../../img/news/vacation.png',
+  alt: 'niezbednik-podroznika',
+  title: 'Przerwa wakacyjna 3-31.08.2020',
+  description: `Informujemy, że w dniach 03-31 sierpnia 2020r. przedszkole będzie nieczynne z powodu przerwy wakacyjnej. 
  
-  Morbi id eros quis arcu ornare ultricies. Aenean leo magna, consectetur ut sapien in, efficitur gravida enim. Ut pellentesque metus at orci mollis, quis faucibus diam imperdiet. Maecenas est massa, mollis quis varius ac, fringilla at diam.`,
-}
+  Wszystkich zainteresowanych rekrutacją zachęcamy do kontaktu pod naszym numerem tel: +48 504-670-846 lub adresem email: szlenk.tadeusz@gmail.com
 
-export const entry2 = {
-  href: 'przedszkolaki-wracaja.html',
-  day: 25,
-  month: 5,
-  year: 2020,
-  src: '../../img/artistic-kid.jpg',
-  alt: 'penc',
-  title: 'Przedszkolaki wracają do szkoły',
-  description:
-    'Mauris tristique massa vulputate arcu vestibulum, et consectetur diam pellentesque. Nulla facilisis bibendum turpis, et finibus magna semper at. Phasellus iaculis metus sit amet sagittis auctor. Vestibulum hendrerit augue vel ullamcorper molestie. Nulla eget velit arcu. Morbi id eros quis arcu ornare ultricies. Aenean leo magna, consectetur ut sapien in, efficitur gravida enim. Ut pellentesque metus at orci mollis, quis faucibus diam imperdiet. Maecenas est massa, mollis quis varius ac, fringilla at diam.Mauris tristique massa vulputate arcu vestibulum, et consectetur diam pellentesque. Nulla facilisis bibendum turpis, et finibus magna semper at. Phasellus iaculis metus sit amet sagittis auctor. Vestibulum hendrerit augue vel ullamcorper molestie. Nulla eget velit arcu. Morbi id eros quis arcu ornare ultricies. Aenean leo magna, consectetur ut sapien in, efficitur gravida enim. Ut pellentesque metus at orci mollis, quis faucibus diam imperdiet. Maecenas est massa, mollis quis varius ac, fringilla at diam.',
+  Dzieci, które zostały przyjęte na rok szkolny 2020/21 do Naszej placówki, zapraszamy od 1 września 2020r.
+  
+  Wszystkim przedszkolakom i rodzicom życzymy udanych oraz bezpiecznych wakacji.`,
 }
