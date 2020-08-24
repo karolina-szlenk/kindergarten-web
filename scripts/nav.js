@@ -44,7 +44,7 @@ function generateNav() {
 
   list.classList.add('nav-bar__links')
 
-  navItems.forEach((item) => {
+  navItems.forEach((item, i) => {
     navItem = document.createElement('li')
     navItem.classList.add('nav-bar__links__item')
 
@@ -58,8 +58,29 @@ function generateNav() {
 
     if ('icon' in item) {
       const icon = document.createElement('i')
-      icon.classList.add('fas', 'fa-caret-down')
-      navLink.appendChild(icon)
+      icon.classList.add('fas', 'fa-chevron-down')
+
+      const label = document.createElement('label')
+      label.setAttribute('for', `btn-${i}`)
+      label.classList.add('show-label')
+      label.innerText = `${item.text}`
+      label.append(icon)
+      navItem.prepend(label)
+
+      const input = document.createElement('input')
+      input.setAttribute('type', 'checkbox')
+      input.setAttribute('id', `btn-${i}`)
+      navItem.appendChild(input)
+
+      label.addEventListener('click', function () {
+        if (icon.classList.contains('fa-chevron-down')) {
+          icon.classList.remove('fa-chevron-down')
+          icon.classList.add('fa-chevron-up')
+        } else {
+          icon.classList.remove('fa-chevron-up')
+          icon.classList.add('fa-chevron-down')
+        }
+      })
     }
 
     if ('sublinks' in item) {
