@@ -1,3 +1,18 @@
+const titles = [
+  {
+    mainTitle: 'Niepubliczne Przedszkole Zielona Łąka',
+    subTitle: 'Zaprasza rodziców wraz z dziećmi',
+  },
+  {
+    mainTitle: 'Rekrutacja trwa cały rok',
+    subTitle: 'Zapraszamy do kontaktu po więcej informacji',
+  },
+  {
+    mainTitle: 'Ciepła i rodzinna atmosfera',
+    subTitle: 'Indywidualne podejście do każdego dziecka',
+  },
+]
+
 class Slider {
   constructor(elemSelector) {
     this.currentSlide = 0
@@ -26,6 +41,17 @@ class Slider {
     }
 
     this.slides = slidesWrapper.querySelectorAll('.slider__slide')
+
+    this.slides.forEach((slider, index) => {
+      const title = document.createElement('h2')
+      title.classList.add('hero__title')
+      title.innerText = titles[index].mainTitle
+      slider.appendChild(title)
+      const text = document.createElement('p')
+      text.classList.add('hero__text')
+      text.innerText = titles[index].subTitle
+      slider.appendChild(text)
+    })
 
     this.slider.appendChild(slidesWrapper)
 
