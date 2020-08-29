@@ -79,7 +79,7 @@
   line-height: 2rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .news__link {
     flex-direction: row;
   }
