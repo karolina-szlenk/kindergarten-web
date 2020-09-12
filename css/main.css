@@ -161,7 +161,7 @@ a {
   display: inline-block;
   padding-bottom: 3px;
   position: relative;
-  z-index: 15;
+  z-index: 9;
 }
 
 .main__ref-link::before,
