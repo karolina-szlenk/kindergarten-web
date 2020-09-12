@@ -39,5 +39,5 @@ Pictures and logo of the kindergarten were made by me with GIMP and Inkscape.
 
 ![Logo](https://i.postimg.cc/V6x92BNF/logo1.png)
 
-### Author
+## Author
 * [karolina-szlenk](https://github.com/karolina-szlenk) 
